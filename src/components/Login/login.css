@@ -1,0 +1,166 @@
+.main-container {
+  background-color: #ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.website-logo-name-container {
+  display: flex;
+  flex-direction: column;
+}
+.nesting-credentials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-grow: 1;
+}
+
+.credentials-container {
+  background-color: #fefeff;
+  box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
+  border-radius: 8px;
+  width: 456px;
+  height: 523px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.website-background-image {
+  height: 100vh;
+  order: 1;
+}
+.website-logo-image {
+  height: 39px;
+  width: 49px;
+  align-self: center;
+}
+.login-heading {
+  text-align: center;
+  font-size: 25px;
+  color: #000000;
+}
+.website-heading {
+  text-align: center;
+  font-style: italic;
+  color: #f7931e;
+}
+.name-title {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #475569;
+  margin-top: 20px;
+}
+
+.name-input-field {
+  height: 40px;
+  width: 100%;
+  border: none;
+  background: #e2e8f0;
+  border-radius: 2px;
+}
+.error-msg {
+  font-size: 14px;
+  font-family: 'DM Sans';
+  color: #ef4444;
+}
+
+.login-button {
+  background: #f7931e;
+  border-radius: 8px;
+  border: none;
+  height: 40px;
+  width: 360px;
+  color: #ffffff;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.image-container {
+  background-image: url('https://res.cloudinary.com/degbnzg10/image/upload/v1686326346/Rectangle_1456_j56jdy.png');
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+
+@media (max-width: 991px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-image: url('https://res.cloudinary.com/degbnzg10/image/upload/v1686326346/Rectangle_1456_j56jdy.png');
+    background-size: cover;
+  }
+  /* .website-logo-image {
+    display: block;
+  } */
+  .website-heading {
+    display: block;
+    margin-left: 10px;
+  }
+  .website-logo-name-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .website-background-image {
+    /* notice here */
+    display: none;
+    order: 0;
+    height: 350px;
+    width: 350px;
+    margin: 0;
+    align-self: flex-end;
+    border-radius: 350px;
+    position: relative;
+    top: -60px;
+    right: -60px;
+  }
+  .nesting-credentials-container {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+    /* border: 10px solid #ef4444; */
+    align-self: center;
+    max-width: 100%;
+  }
+  .credentials-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 5px #000000; */
+    max-width: 100%;
+    background-color: transparent;
+  }
+  .login-heading {
+    color: #ffffff;
+  }
+  .name-title {
+    color: #ffffff;
+  }
+  .name-input-field {
+    width: 200px;
+    background-color: transparent;
+    border: solid 1px #ffffff;
+    color: #ffffff;
+    border-radius: 8px;
+  }
+  .login-button {
+    height: 35px;
+    width: 40%;
+  }
+}

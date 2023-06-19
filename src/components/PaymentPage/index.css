@@ -1,0 +1,36 @@
+.payment-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.payment-main-container img {
+  height: 50px;
+  width: 50px;
+}
+
+.payment-main-container button {
+  width: 130px;
+  height: 32px;
+  background: #f7931e;
+  border-radius: 8px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.payment-para {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  text-align: center;
+
+  /* Light / blue-gray / 500 */
+
+  color: #64748b;
+}

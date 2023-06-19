@@ -1,0 +1,45 @@
+.not-found-conatiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 50px 0;
+}
+
+.not-found-image {
+  width: 269px;
+  height: 270px;
+}
+.not-found-heading {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  margin: 0;
+  text-align: center;
+
+  color: #1e293b;
+}
+
+.not-found-para {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+
+  text-align: center;
+
+  color: #475569;
+}
+
+.not-found-button {
+  width: 123px;
+  height: 48px;
+  background: #f7931e;
+  border-radius: 12px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}

@@ -1,0 +1,93 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 140px 30px 140px;
+  background-color: #f8fafc;
+}
+
+.logo-and-c-name {
+  display: flex;
+  align-items: center;
+}
+.c-name {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  color: #f7931e;
+  text-decoration: none;
+  cursor: pointer;
+}
+.c-image {
+  height: 39px;
+  width: 49px;
+  margin-right: 10px;
+}
+
+.non-active-link {
+  font-family: 'DM Sans';
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  color: #f7931e;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.activated {
+  color: #000000;
+}
+
+.logout-button {
+  background: #f7931e;
+  border-radius: 8px;
+  border: none;
+  height: 30px;
+  width: 70px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.hide-menu {
+  display: block;
+}
+
+.wrapping-img-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+  }
+  .logo-and-c-name {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .padding-style {
+    padding: 30px 0 30px 0;
+  }
+  .hide-menu {
+    display: none;
+  }
+  .menu-button {
+    display: inline-block;
+    background-color: transparent;
+    height: 30px;
+    width: 60px;
+    font-size: 30px;
+    border: none;
+  }
+}
