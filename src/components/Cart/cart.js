@@ -87,53 +87,77 @@ class Cart extends Component {
       <div>
         <Navbar showCartActive />
         <div className="mc">
-          <div className="headings-container">
-            <h1 className="headings">Item</h1>
-            <h1 className="headings">Quantity</h1>
-            <h1 className="headings">Price</h1>
-          </div>
-          <ul className="list-styling">
-            {cartItems.map(x => (
-              <li className="list-items">
-                <div className="ic">
-                  <img
-                    src={x.imageUrl}
-                    alt="food-item"
-                    className="food-item-img"
-                  />
-                  <h1 className="food-name-1">{x.name}</h1>
-                </div>
-                <div className="counter-styling">
-                  <h1 className="food-name-2">{x.name}</h1>
-                  <Counter
-                    id={x.id}
-                    decreaseQty={this.decreaseQty}
-                    increaseQty={this.increaseQty}
-                    quantity={x.quantity}
-                  />
-                  <p className="price-2">{x.cost * x.quantity}</p>
-                </div>
-                <p className="price-1">{x.cost * x.quantity}</p>
-              </li>
-            ))}
-          </ul>
-          <hr />
-          <div className="cart-end-section">
-            <h1 className="headings" style={{fontSize: '24px'}}>
-              Order Total:
-            </h1>
-            <div style={{width: '30%'}}>
-              <p className="headings" style={{fontSize: '24px'}}>
-                ₹{totalCartPrice}
-              </p>
-              <Link to="/payment-page">
-                <button type="button" className="place-order-btn">
-                  Place Order
-                </button>
-              </Link>
+          <div
+            style={{
+              border: 'solid 1px #f7931e',
+              backgroundColor: '#f2f2f2',
+              borderRadius: '10px',
+              width: '100%',
+            }}
+          >
+            <ul className="headings-container">
+              <li className="headings item-heading">Item</li>
+              <li className="headings">Quantity</li>
+              <li className="headings">Price</li>
+            </ul>
+            <div
+            // style={{border: 'solid 5px #000'}}
+            >
+              {cartItems.map(x => (
+                <ul className="cart-items-list">
+                  <li>
+                    <div className="ic">
+                      <img
+                        src={x.imageUrl}
+                        alt="food-item"
+                        className="food-item-img"
+                      />
+                      <h1 className="food-name-1">{x.name}</h1>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="counter-styling">
+                      <h1 className="food-name-2">{x.name}</h1>
+                      <Counter
+                        id={x.id}
+                        decreaseQty={this.decreaseQty}
+                        increaseQty={this.increaseQty}
+                        quantity={x.quantity}
+                      />
+                      <p className="price-2">{x.cost * x.quantity}</p>
+                    </div>
+                  </li>
+                  <li>
+                    <p className="price-1">{x.cost * x.quantity}</p>
+                  </li>
+                </ul>
+              ))}
+            </div>
+
+            <hr />
+            <div className="cart-end-section">
+              <h1
+                className="headings"
+                style={{fontSize: '24px', marginRight: '10px'}}
+              >
+                Order Total:
+              </h1>
+              <div
+              //   style={{width: '30%'}}
+              >
+                <p className="headings" style={{fontSize: '24px'}}>
+                  ₹{totalCartPrice}
+                </p>
+                <Link to="/payment-page">
+                  <button type="button" className="place-order-btn">
+                    Place Order
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
+        {/* footer section goes down */}
         <Footer />
       </div>
     )

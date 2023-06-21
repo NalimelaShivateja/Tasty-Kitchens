@@ -11,7 +11,7 @@ const ProductsHeader = props => {
       <h1 className="rest-title">Popular Restaurants</h1>
       <div className="para-and-drop-down">
         <p className="rest-tagline">
-          Select Your favourite restaurant special dish and make your day
+          Select Your favorite restaurant special dish and make your day
           happy...
         </p>
         <div style={{display: 'flex', alignItems: 'center'}}>
@@ -23,6 +23,7 @@ const ProductsHeader = props => {
                 id={eachItem.value}
                 key={eachItem.value}
                 value={eachItem.value}
+                selected
               >
                 {eachItem.displayText}
               </option>

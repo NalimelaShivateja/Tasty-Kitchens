@@ -43,13 +43,9 @@ class RestaurantsOffersLoader extends Component {
       <div className="container" testid="restaurants-offers-loader">
         <Slider {...settings}>
           {imagesList.map(eachImage => (
-            <ul>
-              <li key={eachImage.id}>
-                <div id={eachImage.id}>
-                  <img src={eachImage.imageUrl} alt="offer" />
-                </div>
-              </li>
-            </ul>
+            <div id={eachImage.id}>
+              <img src={eachImage.imageUrl} alt="offer" />
+            </div>
           ))}
         </Slider>
       </div>

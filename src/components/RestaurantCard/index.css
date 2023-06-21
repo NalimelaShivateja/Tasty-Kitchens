@@ -65,7 +65,7 @@
   .food-item-details {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 300px;
     margin: 20px;
     /* border: solid 5px #000; */
   }

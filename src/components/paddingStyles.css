@@ -1,0 +1,8 @@
+.padding-styles-for-containers {
+  padding: 20px 100px 20px 100px;
+}
+@media (max-width: 991px) {
+  .padding-styles-for-containers {
+    padding: 20px 10px 10px 10px;
+  }
+}

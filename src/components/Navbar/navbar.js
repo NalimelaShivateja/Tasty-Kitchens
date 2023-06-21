@@ -44,19 +44,14 @@ class Navbar extends Component {
     return (
       <nav>
         <div className="logo-and-c-name">
-          <div className="wrapping-img-heading">
-            <Link to="/">
-              <img
-                src="https://res.cloudinary.com/degbnzg10/image/upload/v1686321624/Vector_wva3bi.png"
-                alt="website logo"
-                className="c-image"
-              />
-            </Link>
-
-            <Link to="/" className="c-name">
-              <h1>Tasty Kitchens</h1>
-            </Link>
-          </div>
+          <Link to="/" className="c-name">
+            <img
+              src="https://res.cloudinary.com/degbnzg10/image/upload/v1686321624/Vector_wva3bi.png"
+              alt="website logo"
+              className="c-image"
+            />
+            <h1 style={{fontSize: '20px'}}>Tasty Kitchens</h1>
+          </Link>
           <button
             type="button"
             onClick={this.showOrHideNavMenu}
@@ -67,22 +62,13 @@ class Navbar extends Component {
         </div>
         {/* menu container goes down */}
         <div className={menuClassName}>
-          <ul>
+          <ul className="nav-list-styling">
             <Link to="/" className={homeClassName}>
               <li>Home</li>
             </Link>
             <Link to="/cart" className={cartClassName}>
               <li>Cart</li>
             </Link>
-            <li>
-              <button
-                className="logout-button"
-                type="button"
-                onClick={this.onLogout}
-              >
-                Logout
-              </button>
-            </li>
             <li>
               <button
                 className="logout-button"

@@ -2,7 +2,7 @@
   background: #333333;
   display: flex;
   align-items: center;
-  padding: 20px 120px 20px 120px;
+  padding: 120px 120px 40px 120px;
 }
 .restaurant-image {
   width: 445px;
@@ -64,6 +64,7 @@
     align-items: stretch;
     padding: 10px;
     overflow: hidden;
+    padding: 120px 20px 40px 20px;
   }
   .food-items-list {
     display: flex;
@@ -73,4 +74,7 @@
     list-style-type: none;
     padding: 0;
   }
+  /* .food-items-list li {
+    border: solid 5px #000;
+  } */
 }

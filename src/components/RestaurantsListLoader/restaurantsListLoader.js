@@ -26,9 +26,9 @@ class RestaurantsListLoader extends Component {
   state = {
     restaurantsList: [],
     isLoading: false,
-    offset: 0,
+    offset: 1,
     LIMIT: 9,
-    selectedSortByValue: 'lowest',
+    selectedSortByValue: 'Lowest',
   }
 
   componentDidMount() {
@@ -74,10 +74,7 @@ class RestaurantsListLoader extends Component {
   }
 
   sortRestaurants = value => {
-    this.setState(
-      {selectedSortByValue: value.toLowerCase()},
-      this.getRestaurantsData,
-    )
+    this.setState({selectedSortByValue: value}, this.getRestaurantsData)
   }
 
   renderList = () => {
@@ -86,42 +83,51 @@ class RestaurantsListLoader extends Component {
       <div>
         <ul className="rest-list">
           {restaurantsList.map(eachItem => (
-            <Link
-              to={`/restaurants/${eachItem.id}`}
-              className="rest-box"
-              target="_blank"
-            >
-              <li key={eachItem.id} testid="restaurant-item">
-                <div>
-                  <img
-                    src={eachItem.imageUrl}
-                    alt="restaurant-item"
-                    className="restaurant-image"
-                    style={{width: '160px', height: '100px'}}
-                  />
-                </div>
-                <div>
-                  <h1 className="rest-name">{eachItem.restaurantName}</h1>
-                  <p className="rest-insights">{eachItem.cuisine}</p>
-                  <div style={{display: 'flex', alignItems: 'center'}}>
-                    <AiFillStar
-                      style={{
-                        color: 'orange',
-                        fontSize: '20px',
-                        lineHeight: '0',
-                        marginRight: '5px',
-                      }}
+            <li key={eachItem.id} testid="restaurant-item">
+              {/* <Link to={`restaurants/${eachItem.id}`} target="_blank">
+                <img
+                  src={eachItem.imageUrl}
+                  className="restaurant-image-details"
+                  alt="restaurant-item"
+                />
+              </Link> */}
+              <Link
+                to={`/restaurants/${eachItem.id}`}
+                target="_blank"
+                style={{textDecoration: 'none'}}
+              >
+                <div className="rest-details-box">
+                  <div>
+                    <img
+                      src={eachItem.imageUrl}
+                      alt="restaurant-item"
+                      className="restaurant-image-details"
+                      // style={{width: '160px', height: '100px'}}
                     />
-                    <p className="rest-insights">
-                      <span style={{fontWeight: 'bold', color: '#000000'}}>
-                        {eachItem.avgRating}{' '}
-                      </span>
-                      ({eachItem.totalReviews} ratings)
-                    </p>
+                  </div>
+                  <div>
+                    <h1 className="rest-name">{eachItem.restaurantName}</h1>
+                    <p className="rest-insights">{eachItem.cuisine}</p>
+                    <div style={{display: 'flex', alignItems: 'center'}}>
+                      <AiFillStar
+                        style={{
+                          color: 'orange',
+                          fontSize: '20px',
+                          lineHeight: '0',
+                          marginRight: '5px',
+                        }}
+                      />
+                      <p className="rest-insights">
+                        <span style={{fontWeight: 'bold', color: '#000000'}}>
+                          {eachItem.avgRating}{' '}
+                        </span>
+                        ({eachItem.totalReviews} ratings)
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </li>
-            </Link>
+              </Link>
+            </li>
           ))}
         </ul>
         <div className="pagination-info-container">

@@ -174,7 +174,7 @@ class RestaurantDetailsLoader extends Component {
             />
           </div>
 
-          <div>
+          <div style={{alignSelf: 'center'}}>
             <h1 className="rest-heading">{restaurantDetails.restaurantName}</h1>
             <p className="rest-main-details">{restaurantDetails.cuisine}</p>
             <p className="rest-main-details">{restaurantDetails.location}</p>
@@ -182,7 +182,8 @@ class RestaurantDetailsLoader extends Component {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'space-between',
+                justifyContent: 'flex-start',
+                alignSelf: 'flex-start',
               }}
             >
               <div>
@@ -206,6 +207,7 @@ class RestaurantDetailsLoader extends Component {
                   fontSize: '40px',
                   fontWeight: 'lighter',
                   color: '#E2E8F0',
+                  margin: '0 10px 0 10px',
                 }}
               >
                 |

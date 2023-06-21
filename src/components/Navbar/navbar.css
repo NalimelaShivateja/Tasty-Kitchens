@@ -1,25 +1,41 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 30px 140px 30px 140px;
+  align-items: center;
   background-color: #f8fafc;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0px 15px 10px -14px #111;
+  padding: 5px 100px 5px 100px;
+}
+
+.nav-list-styling {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-and-c-name {
   display: flex;
+  justify-content: space-around;
   align-items: center;
+  /* width: 100%; */
 }
 .c-name {
   font-family: 'DM Sans';
   font-style: italic;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 15px;
   line-height: 16px;
   letter-spacing: 0.01em;
   text-transform: capitalize;
   color: #f7931e;
   text-decoration: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 .c-image {
   height: 39px;
@@ -69,15 +85,16 @@ nav {
   nav {
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    padding: 15px;
   }
   .logo-and-c-name {
+    width: 100%;
     display: flex;
     justify-content: space-between;
   }
 
   .padding-style {
-    padding: 30px 0 30px 0;
+    padding: 0;
   }
   .hide-menu {
     display: none;
